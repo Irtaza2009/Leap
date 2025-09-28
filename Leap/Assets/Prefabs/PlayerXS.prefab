@@ -185,3 +185,7 @@ MonoBehaviour:
     m_Bits: 8
   smallSquarePrefab: {fileID: 0}
   maxSacrifices: 3
+  dieSFX: {fileID: 8300000, guid: 3cc91bcf8b2bbd54a831f2692db934f0, type: 3}
+  winSFX: {fileID: 8300000, guid: 8e86a0fa618400343a6faddba9a59947, type: 3}
+  jumpSFX: {fileID: 0}
+  sacrificeSFX: {fileID: 0}

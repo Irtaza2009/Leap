@@ -15,10 +15,26 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool isGrounded = false;
     private Transform groundCheck;
+    private Collider2D col;
+    private bool isDeadPlayer = false;
+
+    [Header("Sounds")]
+    public AudioClip dieSFX;
+    public AudioClip winSFX;
+    public AudioClip jumpSFX;
+    public AudioClip sacrificeSFX;
+    private AudioSource audioSource;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        col = GetComponent<Collider2D>();
+        audioSource = GetComponent<AudioSource>();
+
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>(); // fallback if missing
+        }
 
         // groundCheck child object for collision detection
         groundCheck = new GameObject("GroundCheck").transform;
@@ -44,6 +60,8 @@ public class PlayerController : MonoBehaviour
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            if (jumpSFX != null)
+                audioSource.PlayOneShot(jumpSFX);
         }
 
 
@@ -54,6 +72,9 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Sacrifice used!");
         sacrificesUsed++;
 
+        if (sacrificeSFX != null)
+            audioSource.PlayOneShot(sacrificeSFX);
+
         // Spawn smaller square
         GameObject newPlayer = Instantiate(smallSquarePrefab, transform.position, Quaternion.identity);
         Rigidbody2D newPlayerRB = newPlayer.GetComponent<Rigidbody2D>();
@@ -62,7 +83,20 @@ public class PlayerController : MonoBehaviour
         // Camera follow fix (optional: reassign camera target to new player here)
 
         //Destroy(gameObject); // destroy current player
+
+
+        // Mark this as dead player
+        isDeadPlayer = true;
+
+        // Disable collisions with spikes
+        GameObject[] spikes = GameObject.FindGameObjectsWithTag("Spike");
+        foreach (GameObject spike in spikes)
+        {
+            Physics2D.IgnoreCollision(col, spike.GetComponent<Collider2D>(), true);
+        }
+
         this.enabled = false; // disable current player controls
+
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -74,6 +108,8 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Finish"))
         {
             Debug.Log("Level Complete!");
+            if (winSFX != null)
+                audioSource.PlayOneShot(winSFX);
             UnityEngine.SceneManagement.SceneManager.LoadScene(
                 UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1
             );
@@ -83,6 +119,9 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died!");
+
+        if (dieSFX != null)
+            audioSource.PlayOneShot(dieSFX);
 
         SceneTracker.GoToGameOver();
     }

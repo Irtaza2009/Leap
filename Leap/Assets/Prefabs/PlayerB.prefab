@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4304826097738276480
+--- !u!1 &8391281181505706750
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6068947614162009272}
-  - component: {fileID: 2015470806263679140}
-  - component: {fileID: 863861428290261471}
-  - component: {fileID: 4064368485601523546}
-  - component: {fileID: 4858061606353196454}
+  - component: {fileID: 7862452547682215895}
+  - component: {fileID: 3882577930852748006}
+  - component: {fileID: 2914083892100211994}
+  - component: {fileID: 8830306107469595091}
+  - component: {fileID: 491276356663427595}
   m_Layer: 0
-  m_Name: PlayerS
+  m_Name: PlayerB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6068947614162009272
+--- !u!4 &7862452547682215895
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4304826097738276480}
+  m_GameObject: {fileID: 8391281181505706750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.21, y: -1.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2015470806263679140
+--- !u!212 &3882577930852748006
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4304826097738276480}
+  m_GameObject: {fileID: 8391281181505706750}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -82,8 +82,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 627625725489826318, guid: 630b4fbd4e38e094b8dd0ed360174238, type: 3}
-  m_Color: {r: 0.703504, g: 0.703504, b: 0.703504, a: 1}
+  m_Sprite: {fileID: -2510476293373519475, guid: 630b4fbd4e38e094b8dd0ed360174238, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -93,14 +93,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &863861428290261471
+--- !u!50 &2914083892100211994
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4304826097738276480}
+  m_GameObject: {fileID: 8391281181505706750}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -120,13 +120,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4064368485601523546
+--- !u!61 &8830306107469595091
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4304826097738276480}
+  m_GameObject: {fileID: 8391281181505706750}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -158,34 +158,34 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.7777778, y: 0.7777778}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.7777778, y: 0.7777778}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4858061606353196454
+--- !u!114 &491276356663427595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4304826097738276480}
+  m_GameObject: {fileID: 8391281181505706750}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84b8d2b800c992a4ba14168c12940980, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 6
-  jumpForce: 11
+  m_EditorClassIdentifier: '::'
+  moveSpeed: 5
+  jumpForce: 10
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  smallSquarePrefab: {fileID: 120697277426122091, guid: c76fb06464d27e4478e18f81a4a96958, type: 3}
+  smallSquarePrefab: {fileID: 4304826097738276480, guid: 0fabba21c02a0e446ac9c8b36538a974, type: 3}
   maxSacrifices: 3
   dieSFX: {fileID: 8300000, guid: 3cc91bcf8b2bbd54a831f2692db934f0, type: 3}
   winSFX: {fileID: 8300000, guid: 8e86a0fa618400343a6faddba9a59947, type: 3}
-  jumpSFX: {fileID: 0}
-  sacrificeSFX: {fileID: 0}
+  jumpSFX: {fileID: 8300000, guid: bc05831639cc5f74bbab492cadd7593b, type: 3}
+  sacrificeSFX: {fileID: 8300000, guid: 88a9684c2bf87ce4e8a49d9ae40380f1, type: 3}
