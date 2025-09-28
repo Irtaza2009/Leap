@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.hestia.hackatime": {
+      "version": "https://github.com/unsaltedkale/unity-hackatime.git?path=/Assets/com.hestia.hackatime",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "dbf2978b89f2453586af65b892198e3c9f6615d4"
+    },
     "com.unity.2d.animation": {
       "version": "12.0.2",
       "depth": 0,
@@ -98,7 +105,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.collab-proxy": {
-      "version": "2.8.2",
+      "version": "2.9.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
