@@ -154,7 +154,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 90}
-  m_SizeDelta: {x: -300.9907, y: -248.8435}
+  m_SizeDelta: {x: -166.4409, y: -326.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86041811
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LEAP
+  m_text: Sacrificial LEAP
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8773d457f51ddd24bbd4a91811d423ca, type: 2}
   m_sharedMaterial: {fileID: -78806187739006551, guid: 8773d457f51ddd24bbd4a91811d423ca, type: 2}
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 120
+  m_fontSize: 101.75
   m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 1
